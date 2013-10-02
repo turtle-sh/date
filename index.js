@@ -35,9 +35,9 @@ define({
     var val;
     var obj = {
       stdout: {
-        write: function() { val = arguments[0]; }
+        write: function(arg) { val = arg; }
       },
-      exit: function() {};
+      exit: function() {}
     };
     var args = this.parse('date -r 0');
     this.fn.apply(obj, this.parse('date -r 0') );
